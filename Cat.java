@@ -10,20 +10,17 @@ class Cat{
         System.out.println("Name: " + name);
         System.out.println("Color: " + color);
         System.out.println("Age: " + age);
-        System.out.println("Dead: " + dead);
-        System.out.println("Died: " + died);
 
         if (dead) {
             System.out.println("This cat has finally died");
-        } else {
-            System.out.println("This cat has only died " + died + " times.");
+        } else if (died == 0) {
+            System.out.println("This cat has never died!");
             died = died + 1;
-            System.out.println("Died: " + died);
-            // if (died == 2) {
-            //     dead = true;
-            // }
+        } else if (died == 1) {
+            System.out.println("This cat died 1 time.");
+            died = died + 1;
+            dead = true;
         }
-
     }
 
     public static void main(String[] args) {
@@ -32,6 +29,8 @@ class Cat{
         curly.color = "Black";
         curly.age = 102;
         curly.died = 0;
+        curly.stats();
+        curly.stats();
         curly.stats();
     }
 }
