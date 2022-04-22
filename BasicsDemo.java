@@ -83,13 +83,30 @@ class BasicsDemo {
 		System.out.println("Mid-Term 3: " + scores[2]);
 		System.out.println("Mid-Term 4: " + scores[3]);
 
-		Student[] students = new Student[3];
-		students[0] = new Student();
-		students[1] = new Student();
-		students[2] = new Student();
+		//OPTION A
+		// Student[] students = new Student[3];
+		// students[0] = new Student();
+		// students[1] = new Student();
+		// students[2] = new Student(); 
+
+		//OPTION B
+		// Student[] students = new Student[] {new Student(), new Student(), new Student()};
+
+		//OPTION C
+		Student[] students = {new Student(), new Student(), new Student()};
 		System.out.println("Student 1: " + students[0]);
 		System.out.println("Student 2: " + students[1]);
 		System.out.println("Student 3: " + students[2]);
+	}
+
+	static void twodArrays() {
+		int[][] myArray = new int[4][2]; //[rows][colums]
+		int[][] anotherArray = new int[][]{
+			{9,11},
+			{8, 90},
+			{43, 88},
+			{21, 84}
+		};
 	}
 
 	public static void main(String[] args) {	
@@ -97,6 +114,7 @@ class BasicsDemo {
 		//print();				
 		//primitives();
 		// typeCasting(); 
-		arrays();
+		// arrays();
+		twodArrays();
 	}       
 }
