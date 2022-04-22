@@ -107,6 +107,7 @@ class BasicsDemo {
 			{43, 88},
 			{21, 84}
 		};
+		int[][][] threeDArray = new int [3][2][4]; // [rows][columns][depth]
 	}
 
 	public static void main(String[] args) {	
